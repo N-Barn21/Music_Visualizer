@@ -38,6 +38,7 @@ public class AudioController : MonoBehaviour {
             }
         }
     }
+
     //important so we get more movement in all the cubes as some spectrums are not hit with certain audio frequencies
     void createFrequencyBands()
     {

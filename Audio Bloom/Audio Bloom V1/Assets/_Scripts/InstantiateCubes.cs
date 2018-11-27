@@ -29,7 +29,7 @@ public class InstantiateCubes : MonoBehaviour {
 	void Update () {
         for (int i = 0; i < 512; i++)
         {
-            //ensures a cable is not Null for some reason, and if so does not apply audio values to it
+            //ensures a cube is not Null for some reason, and if so does not apply audio values to it
             if(_sampleCubes[i] != null)
             {
                 //This is what will make the cubes respond to the audio values
