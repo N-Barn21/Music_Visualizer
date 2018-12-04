@@ -205,11 +205,111 @@ public class DualCones_Visualizer : MonoBehaviour
             _sampleCubes[i] = _temp;
         }
     }
+
     void RotateCircles()
     {
         for (int i = 0; i < _sampleCubes.Length; i++)
         {
-            _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, 1, 1), speed * Time.deltaTime);
+            if (i < 4 || i > 507)
+            {
+                if (i < 4) // 1st layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 17th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 8 if, draw 7 cubes, occurs twice
+            else if ((i > 3 && i < 11) || (i > 500 && i < 508))
+            {
+                if (i > 3 && i < 11) // 2nd layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 16th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 7 if, draw 10 cubes, occurs twice
+            else if ((i > 10 && i < 21) || (i > 490 && i < 501))
+            {
+                if ((i > 10 && i < 21)) // 3rd layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 15th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 6 if, draw 20 cubes, occurs twice
+            else if ((i > 20 && i < 41) || (i > 470 && i < 491))
+            {
+                if (i > 20 && i < 41) // 4th layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 14th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 5 if, draw 30 cubes, occurs twice
+            else if ((i > 40 && i < 71) || (i > 440 && i < 471))
+            {
+                if (i > 40 && i < 71) // 5th layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 13th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 4 if, draw 40 cubes, occurs twice
+            else if ((i > 70 && i < 111) || (i > 400 && i < 441))
+            {
+                if (i > 70 && i < 111) // 6th layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 12th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 3 if, draw 50 cubes, occurs twice
+            else if ((i > 110 && i < 161) || (i > 350 && i < 401))
+            {
+                if (i > 110 && i < 161) // 7th layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 11th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  Layer 2 if, draw 60 cubes, occurs twice
+            else if ((i > 160 && i < 221) || (i > 290 && i < 351))
+            {
+                if (i > 160 && i < 221) // 8th layer of sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, -1, 0), speed * Time.deltaTime);
+                }
+                else      // 10th Layer of Sphere
+                {
+                    _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(-1, -1, 0), speed * Time.deltaTime);
+                }
+            }
+            //  layer 1 if, draw 70 cubes, occurs once
+            else if (i > 220 && i < 291)
+            {
+                _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(0, -1, 0), speed * Time.deltaTime);
+            }
         }
     }
 

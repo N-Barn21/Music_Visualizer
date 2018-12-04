@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fca52bfdcff884d9c3e7671f57814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sampleCubePrefab: {fileID: 129616, guid: e22fc12d2214d9743980c62ff6e63a61, type: 2}
+  _sampleCubePrefab: {fileID: 129616, guid: 55be7fbee532e9245a6c7a5ff747297f, type: 2}
   _startScale: 1
   _scaleMultiplier: 200
   _useBuffer: 1
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab88643e03c2cd944b6fbf4650235daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sampleCubePrefab: {fileID: 129616, guid: 55be7fbee532e9245a6c7a5ff747297f, type: 2}
+  _sampleCubePrefab: {fileID: 129616, guid: 98875e3defde74546aef81d300ec6923, type: 2}
   _startScale: 1
   _scaleMultiplier: 100
   _useBuffer: 1
@@ -1272,11 +1272,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47659fbb9dc79bb4b877525ca2b1aab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sampleCubePrefab: {fileID: 129616, guid: 98875e3defde74546aef81d300ec6923, type: 2}
+  _sampleCubePrefab: {fileID: 129616, guid: 25702c56e2a48b64ab080f89267bdd80, type: 2}
   sphereStart: 150
   _startScale: 1
   _scaleMultiplier: 5
   _useBuffer: 1
+  speed: 10
 --- !u!4 &1325735776
 Transform:
   m_ObjectHideFlags: 0
