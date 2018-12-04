@@ -168,6 +168,10 @@ Prefab:
       propertyPath: m_Name
       value: Light_LAMP4
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
   m_IsPrefabAsset: 0
@@ -225,6 +229,10 @@ Prefab:
     - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
       propertyPath: m_Name
       value: Light_LAMP3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
@@ -604,6 +612,10 @@ Prefab:
     - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
       propertyPath: m_Name
       value: Light_LAMP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
@@ -1113,6 +1125,10 @@ Prefab:
       propertyPath: m_Name
       value: Light_LAMP2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012828375150, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a86a245c874f341815b25579c74e3e, type: 2}
   m_IsPrefabAsset: 0
@@ -1145,7 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 129616, guid: 55be7fbee532e9245a6c7a5ff747297f, type: 2}
   _maxscale: 1000
-  sphereStart: 250
+  sphereStart: 100
 --- !u!4 &1325735776
 Transform:
   m_ObjectHideFlags: 0
@@ -1153,7 +1169,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325735774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33, y: 67, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
