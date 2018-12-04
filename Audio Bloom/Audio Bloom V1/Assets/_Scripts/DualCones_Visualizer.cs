@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereScene : MonoBehaviour
+public class DualCones_Visualizer : MonoBehaviour
 {
     public GameObject _sampleCubePrefab;
     private GameObject[] _sampleCubes = new GameObject[512];
-    public float _maxscale;
-    private float[] sphereAngles;
+    private int[] bandAssignments = new int[512];
     private int[] layerCounts;
+    private float[] sphereAngles;
     public float sphereStart;
+    public float _startScale;
+    public float _scaleMultiplier;
+    public bool _useBuffer;
+
     // Use this for initialization of circular cubes formation
     void Start()
     {
@@ -47,6 +51,7 @@ public class SphereScene : MonoBehaviour
             layerCounts[i] = 0;
         }
 
+        int count = 0;
         for (int i = 0; i < 512; i++)
         {
             GameObject _temp = (GameObject)Instantiate(_sampleCubePrefab); //Create a temp cube to put in array
@@ -103,7 +108,7 @@ public class SphereScene : MonoBehaviour
                 }
             }
             //  Layer 6 if, draw 20 cubes, occurs twice
-            else if ((i > 20 && i < 41) || (i >= 470 && i < 491))
+            else if ((i > 20 && i < 41) || (i > 470 && i < 491))
             {
                 if (i > 20 && i < 41) // 4th layer of sphere
                 {
@@ -119,7 +124,7 @@ public class SphereScene : MonoBehaviour
                 }
             }
             //  Layer 5 if, draw 30 cubes, occurs twice
-            else if ((i > 40 && i < 71) || (i >= 440 && i < 471))
+            else if ((i > 40 && i < 71) || (i > 440 && i < 471))
             {
                 if (i > 40 && i < 71) // 5th layer of sphere
                 {
@@ -190,6 +195,12 @@ public class SphereScene : MonoBehaviour
                 _temp.transform.position = new Vector3(0, sphereStart, 45);
                 layerCounts[8]++;
             }
+            bandAssignments[i] = 0;
+            if (count == 7)
+                count = 0;
+            else
+                count++;
+
             _sampleCubes[i] = _temp;
         }
     }
@@ -197,13 +208,21 @@ public class SphereScene : MonoBehaviour
     // Update is called once per to animate the cubes bases on sound read in
     void Update()
     {
-        for (int i = 0; i < 512; i++)
+        for (int i = 0; i < _sampleCubes.Length; i++)
         {
-            //ensures a cube is not Null for some reason, and if so does not apply audio values to it
-            if (_sampleCubes[i] != null)
+            if (_useBuffer == true)
             {
-                //This is what will make the cubes respond to the audio values
-                _sampleCubes[i].transform.localScale = new Vector3(10, (AudioController._samples[i] * _maxscale) + 2, 10);
+                _sampleCubes[i].transform.localScale = new Vector3(
+                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
+            }
+            if (_useBuffer == false)
+            {
+                _sampleCubes[i].transform.localScale = new Vector3(
+                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
             }
         }
     }

@@ -349,7 +349,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &552324678
 MonoBehaviour:
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 822468916}
   - component: {fileID: 822468915}
   m_Layer: 0
-  m_Name: InstantiateCubes
+  m_Name: FountainVisualizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +758,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 129616, guid: 55be7fbee532e9245a6c7a5ff747297f, type: 2}
-  _maxscale: 1000
+  _startScale: 1
+  _scaleMultiplier: 100
+  _useBuffer: 1
+  speed: 10
 --- !u!4 &822468916
 Transform:
   m_ObjectHideFlags: 0
@@ -770,7 +773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846685323
 GameObject:
@@ -1029,7 +1032,7 @@ Transform:
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &917426500
 GameObject:
@@ -1059,7 +1062,7 @@ Transform:
   - {fileID: 593815678}
   - {fileID: 1673438741}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107884440
 GameObject:
@@ -1088,7 +1091,7 @@ Transform:
   m_Children:
   - {fileID: 846685324}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &1160021313 stripped
 Transform:
@@ -1252,7 +1255,7 @@ GameObject:
   - component: {fileID: 1325735776}
   - component: {fileID: 1325735775}
   m_Layer: 0
-  m_Name: createSphere
+  m_Name: DualCones_Visualizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1270,8 +1273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 129616, guid: 55be7fbee532e9245a6c7a5ff747297f, type: 2}
-  _maxscale: 1000
-  sphereStart: 100
+  sphereStart: 200
+  _startScale: 1
+  _scaleMultiplier: 5
+  _useBuffer: 1
 --- !u!4 &1325735776
 Transform:
   m_ObjectHideFlags: 0
@@ -1283,7 +1288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1424596000
 GameObject:
@@ -1315,7 +1320,7 @@ Transform:
   - {fileID: 1160021313}
   - {fileID: 1811502325}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434023527
 GameObject:
@@ -1348,7 +1353,7 @@ Transform:
   - {fileID: 389605442}
   - {fileID: 1276927115}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599434583
 GameObject:
