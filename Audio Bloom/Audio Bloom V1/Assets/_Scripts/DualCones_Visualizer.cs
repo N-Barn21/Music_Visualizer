@@ -13,6 +13,7 @@ public class DualCones_Visualizer : MonoBehaviour
     public float _startScale;
     public float _scaleMultiplier;
     public bool _useBuffer;
+    public float speed = 10;
 
     // Use this for initialization of circular cubes formation
     void Start()
@@ -204,9 +205,16 @@ public class DualCones_Visualizer : MonoBehaviour
             _sampleCubes[i] = _temp;
         }
     }
+    void RotateCircles()
+    {
+        for (int i = 0; i < _sampleCubes.Length; i++)
+        {
+            _sampleCubes[i].transform.RotateAround(new Vector3(0, 250, 0), new Vector3(1, 1, 1), speed * Time.deltaTime);
+        }
+    }
 
-    // Update is called once per to animate the cubes bases on sound read in
-    void Update()
+            // Update is called once per to animate the cubes bases on sound read in
+            void Update()
     {
         for (int i = 0; i < _sampleCubes.Length; i++)
         {
@@ -225,5 +233,6 @@ public class DualCones_Visualizer : MonoBehaviour
                     (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
             }
         }
+        RotateCircles();
     }
 }
