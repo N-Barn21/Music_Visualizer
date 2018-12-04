@@ -9,6 +9,7 @@ public class Line_Visualizer : MonoBehaviour {
     public float _startScale;
     public float _scaleMultiplier;
     public bool _useBuffer;
+    Material material;
 
     // Use this for initialization
     void Start () {
@@ -38,15 +39,29 @@ public class Line_Visualizer : MonoBehaviour {
         {
             if (_useBuffer == true)
             {
-                _sampleCubes[i].transform.localScale = new Vector3(10,
+                material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
+                _sampleCubes[i].transform.localScale = new Vector3(20,
                     (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    10);
+                    20);
+                
+                Color color = new Color(AudioController.audioBandBuffer[bandAssignments[i]],
+                    AudioController.audioBandBuffer[bandAssignments[i]], 
+                    AudioController.audioBandBuffer[bandAssignments[i]]);
+                material.SetColor("_EmissionColor", color);
+                
             }
             if (_useBuffer == false)
             {
-                _sampleCubes[i].transform.localScale = new Vector3(10,
+                material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
+                _sampleCubes[i].transform.localScale = new Vector3(20,
                     (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    10);
+                    20);
+                
+                Color color = new Color(AudioController.audioBandBuffer[bandAssignments[i]],
+                   AudioController.audioBandBuffer[bandAssignments[i]],
+                   AudioController.audioBandBuffer[bandAssignments[i]]);
+                material.SetColor("_EmissionColor", color);
+                
             }
         }
     }

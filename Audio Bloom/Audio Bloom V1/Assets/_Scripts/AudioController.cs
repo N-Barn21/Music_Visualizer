@@ -9,9 +9,13 @@ public class AudioController : MonoBehaviour {
     public static float[] _freqband = new float[8]; // reduce number of samples to a generic 8
     public static float[] _bandbuffer = new float[8];
     private float[] _bufferdecrease = new float[8];
-	
+
+    float[] frequencyBandHighest = new float[8];
+    public static float[] audioBand = new float[8];
+    public static float[] audioBandBuffer = new float[8];
+
     // Initialization of _audiosource to the sound of the audio file provided
-	void Start () {
+    void Start () {
         _audiosource = GetComponent<AudioSource>();
 	}
 	
@@ -20,6 +24,20 @@ public class AudioController : MonoBehaviour {
         GetSpectrumAudioSource();
         createFrequencyBands();
         bandbuffer();
+        CreateAudioBands();
+    }
+
+    void CreateAudioBands()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if(_freqband[i] > frequencyBandHighest[i])
+            {
+                frequencyBandHighest[i] = _freqband[i];
+            }
+            audioBand[i] = (_freqband[i] / frequencyBandHighest[i]);
+            audioBandBuffer[i] = (_bandbuffer[i] / frequencyBandHighest[i]);
+        }
     }
 
     void bandbuffer()
