@@ -157,15 +157,15 @@ public class Fountain_Visualizer: MonoBehaviour {
         {
             if (_useBuffer == true)
             {
-                _sampleCubes[i].transform.localScale = new Vector3(20,
+                _sampleCubes[i].transform.localScale = new Vector3(5,
                     (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    20);
+                    5);
             }
             if (_useBuffer == false)
             {
-                _sampleCubes[i].transform.localScale = new Vector3(20,
+                _sampleCubes[i].transform.localScale = new Vector3(5,
                     (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    20);
+                    5);
             }
         }
         RotateCircles();

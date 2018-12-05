@@ -8,14 +8,39 @@ public class LightOnAudio : MonoBehaviour {
     public float maxIntensity;
     Light light;
 
+    //Color control Variables
+    public float speed = 1.0f;
+    public Color startColor;
+    public Color endColor;
+    public bool repeatable = false;
+    float startTime;
 	// Use this for initialization
 	void Start () {
         light = GetComponent<Light>();
+        startTime = Time.time;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+ 
+    void LightColorChange()
+    {
+        if (!repeatable)
+        {
+            float t = (Time.time - startTime) * speed;
+            light.color = Color.Lerp(startColor, endColor, t);
+        }
+        else
+        {
+            float t = (Mathf.Sin(Time.time - startTime) * speed);
+            light.color = Color.Lerp(startColor, endColor, t);
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
         light.intensity = (AudioController.audioBandBuffer[_band] * (maxIntensity - minIntensity))
             + minIntensity;
-	}
+        //startColor = new Color(Random.value, Random.value, Random.value);
+        //endColor = new Color(Random.value, Random.value, Random.value);
+        LightColorChange();
+
+    }
 }
