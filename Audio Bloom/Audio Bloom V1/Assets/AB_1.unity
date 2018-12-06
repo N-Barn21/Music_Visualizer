@@ -172,6 +172,8 @@ MonoBehaviour:
   key4: 52
   key5: 53
   key6: 54
+  keyP: 112
+  keyESC: 27
 --- !u!1001 &10463490
 Prefab:
   m_ObjectHideFlags: 0
@@ -704,8 +706,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.94509804, g: 0.83511657, b: 0.109803915, a: 1}
-      key1: {r: 0.8867924, g: 0.09620863, b: 0.36011103, a: 1}
+      key0: {r: 0.11141001, g: 0.031149892, b: 0.9433962, a: 1}
+      key1: {r: 0.12775902, g: 0.79341555, b: 0.9339623, a: 1}
       key2: {r: 0.13623093, g: 0.9851176, b: 0.90140665, a: 0}
       key3: {r: 0.105303146, g: 0.082858644, b: 0.9245283, a: 0}
       key4: {r: 0.2705852, g: 0.082352936, b: 0.54509807, a: 0}
@@ -10727,7 +10729,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8425fe30068f4c4469eac3f1f1b0e256, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8c4f8a973c9db8a4db90654076b232a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -23582,8 +23584,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.8867924, g: 0.09620863, b: 0.36011103, a: 1}
-      key1: {r: 0.8881243, g: 0.10076911, b: 0.35425547, a: 1}
+      key0: {r: 0.12941173, g: 0.93333334, b: 0.293594, a: 1}
+      key1: {r: 0.12941173, g: 0.70852417, b: 0.93333334, a: 1}
       key2: {r: 0.94509804, g: 0.83511657, b: 0.109803915, a: 0}
       key3: {r: 1, g: 0.585702, b: 0, a: 0}
       key4: {r: 1, g: 0.585702, b: 0, a: 0}
@@ -23591,7 +23593,7 @@ TrailRenderer:
       key6: {r: 1, g: 0.585702, b: 0, a: 0}
       key7: {r: 1, g: 0.585702, b: 0, a: 0}
       ctime0: 0
-      ctime1: 1542
+      ctime1: 65535
       ctime2: 65535
       ctime3: 65535
       ctime4: 65535
@@ -23607,7 +23609,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 3
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0

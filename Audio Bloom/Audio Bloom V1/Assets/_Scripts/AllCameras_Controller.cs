@@ -5,10 +5,24 @@ using UnityEngine;
 public class AllCameras_Controller : MonoBehaviour {
 
     public Camera FirstPersonCam, cam2, cam3, cam4, cam5, cam6;
-    public KeyCode key1, key2, key3, key4, key5, key6;
+    public KeyCode key1, key2, key3, key4, key5, key6, keyP, keyESC;
+    private bool isPaused = false;
 
-    // Update is called once per frame
-    void Update()
+    void Pause()
+    {
+        if (isPaused == true)
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+    }
+        // Update is called once per frame
+        void Update()
     {
 
         if (Input.GetKeyDown(key1))
@@ -65,6 +79,12 @@ public class AllCameras_Controller : MonoBehaviour {
             cam5.gameObject.SetActive(false);
             cam6.gameObject.SetActive(true);
         }
-
+        if (Input.GetKeyDown(keyESC)){
+            Application.Quit();
+        }
+        if (Input.GetKeyDown(keyP))
+        {
+            Pause();
+        }
     }
 }
