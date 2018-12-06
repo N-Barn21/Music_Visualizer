@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Line_Visualizer : MonoBehaviour {
+    public AudioController_V2 aC;
     public GameObject _sampleCubePrefab;
     private GameObject[] _sampleCubes = new GameObject[80];
     private int[] bandAssignments = new int[80];
@@ -41,12 +42,12 @@ public class Line_Visualizer : MonoBehaviour {
             {
                 material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
                 _sampleCubes[i].transform.localScale = new Vector3(20,
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
                     20);
                 
-                Color color = new Color(AudioController.audioBandBuffer[bandAssignments[i]],
-                    AudioController.audioBandBuffer[bandAssignments[i]], 
-                    AudioController.audioBandBuffer[bandAssignments[i]]);
+                Color color = new Color(aC._audioBandBuffer[bandAssignments[i]],
+                    aC._audioBandBuffer[bandAssignments[i]],
+                    aC._audioBandBuffer[bandAssignments[i]]);
                 material.SetColor("_EmissionColor", color);
                 
             }
@@ -54,12 +55,12 @@ public class Line_Visualizer : MonoBehaviour {
             {
                 material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
                 _sampleCubes[i].transform.localScale = new Vector3(20,
-                    (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale,
                     20);
                 
-                Color color = new Color(AudioController.audioBandBuffer[bandAssignments[i]],
-                   AudioController.audioBandBuffer[bandAssignments[i]],
-                   AudioController.audioBandBuffer[bandAssignments[i]]);
+                Color color = new Color(aC._AmplitudeBuffer,
+                   aC._AmplitudeBuffer,
+                   aC._AmplitudeBuffer);
                 material.SetColor("_EmissionColor", color);
                 
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DualCones_Visualizer : MonoBehaviour
 {
+    public AudioController_V2 aC;
     public GameObject _sampleCubePrefab;
     private GameObject[] _sampleCubes = new GameObject[512];
     private int[] bandAssignments = new int[512];
@@ -321,16 +322,16 @@ public class DualCones_Visualizer : MonoBehaviour
             if (_useBuffer == true)
             {
                 _sampleCubes[i].transform.localScale = new Vector3(
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
+                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
             }
             if (_useBuffer == false)
             {
                 _sampleCubes[i].transform.localScale = new Vector3(
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale);
+                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale,
+                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale,
+                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale);
             }
         }
         RotateCircles();

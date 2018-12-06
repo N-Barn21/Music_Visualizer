@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
-
+public class ProceduralPhyllotaxis_LIGHTS : MonoBehaviour {
     public AudioController_V2 aC;
-    private Material _trailMat;
-    public Color _trailColor;
+    public Color _lightColor;
 
     public float _degree;
     public float _scale;
@@ -27,7 +25,7 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
 
     private int _number;
     private int _currentIteration;
-    private TrailRenderer _trailRenderer;
+    private Light _light;
     private Vector2 phyllotaxisPosition;
 
     //What to do when it reaches maxIteration Value
@@ -67,10 +65,8 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
     {
         _currentScale = _scale;
         _forward = true;
-        _trailRenderer = GetComponent<TrailRenderer>();
-        _trailMat = new Material(_trailRenderer.material);
-        _trailMat.SetColor("_TintColor", _trailColor);
-        _trailRenderer.material = _trailMat;
+        _light = GetComponent<Light>();
+        _light.color = _lightColor;
         _number = _numberStart;
         this.transform.localPosition = calcPhyllotaxis(_degree, _currentScale, _number);
         if (_useLerping)
@@ -108,7 +104,7 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
                     _lerpPosAnimCurvve.Evaluate(aC._audioBand[_lerpPosBand]));
                 _lerpPosTimer += Time.deltaTime * _lerpPosSpeed;
                 transform.localPosition = Vector3.Lerp(_startPos, _endPos, Mathf.Clamp01(_lerpPosTimer));
-                if(_lerpPosTimer >= 1)
+                if (_lerpPosTimer >= 1)
                 {
                     _lerpPosTimer -= 1;
                     if (_forward)
@@ -118,10 +114,10 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
                     }
                     else
                     {
-                    _number -= _stepSize;
-                    _currentIteration--;
+                        _number -= _stepSize;
+                        _currentIteration--;
                     }
-                    if(_currentIteration > 0 && _currentIteration < _maxIteration)
+                    if (_currentIteration > 0 && _currentIteration < _maxIteration)
                     {
                         setLerpPositions();
                     }
@@ -149,7 +145,7 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
                 }
             }
         }
-        if(!_useLerping)
+        if (!_useLerping)
         {
             phyllotaxisPosition = calcPhyllotaxis(_degree, _currentScale, _number);
             transform.localPosition = new Vector3(phyllotaxisPosition.x, phyllotaxisPosition.y, 0);
@@ -157,5 +153,4 @@ public class ProceduralPhyllotaxis_AUDIO : MonoBehaviour {
             _currentIteration++;
         }
     }
-
 }

@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.7600059, g: 0.2470588, b: 0.9529412, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -589,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.91736627, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -803,6 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.26758245, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -948,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -992,6 +996,149 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &117250640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117250641}
+  - component: {fileID: 117250643}
+  - component: {fileID: 117250642}
+  m_Layer: 0
+  m_Name: nodeLight5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117250641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117250640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &117250642
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117250640}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &117250643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117250640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.9529412, g: 0.24705882, b: 0.80784315, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10088
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 4
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 4
 --- !u!1001 &155639092
 Prefab:
   m_ObjectHideFlags: 0
@@ -1152,10 +1299,154 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 1
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
+--- !u!1 &175340185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175340186}
+  - component: {fileID: 175340188}
+  - component: {fileID: 175340187}
+  m_Layer: 0
+  m_Name: nodeLight8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &175340186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175340185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &175340187
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175340185}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &175340188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175340185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.9607843, g: 0.9607843, b: 0.14901961, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10154
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 7
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 7
 --- !u!1 &181549750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.91736627, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -1774,6 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.18187828, g: 0.15730685, b: 0.9528302, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -1982,6 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.80831206, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -2022,7 +2316,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -2453,6 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.35315782, g: 0.9529412, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -2887,6 +3200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.36158893, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -2966,6 +3280,14 @@ Transform:
   - {fileID: 1717737650}
   - {fileID: 1568186715}
   - {fileID: 486936424}
+  - {fileID: 937600169}
+  - {fileID: 1495472711}
+  - {fileID: 648089574}
+  - {fileID: 390795173}
+  - {fileID: 117250641}
+  - {fileID: 375202828}
+  - {fileID: 399823346}
+  - {fileID: 175340186}
   m_Father: {fileID: 1925916831}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3035,6 +3357,149 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &375202827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375202828}
+  - component: {fileID: 375202830}
+  - component: {fileID: 375202829}
+  m_Layer: 0
+  m_Name: nodeLight6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &375202828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 375202827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &375202829
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 375202827}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &375202830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 375202827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.98039216, g: 0.17254902, b: 0.20784314, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10110
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 5
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 5
 --- !u!1 &381991195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,9 +3633,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.36158893, b: 0.9529412, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10066
   _stepSize: 1
   _maxIteration: 179
@@ -3347,9 +3813,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.7600059, g: 0.2470588, b: 0.9529412, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10088
   _stepSize: 1
   _maxIteration: 179
@@ -3434,6 +3901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -3564,6 +4032,149 @@ Transform:
   m_Father: {fileID: 1434023528}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!1 &390795172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390795173}
+  - component: {fileID: 390795175}
+  - component: {fileID: 390795174}
+  m_Layer: 0
+  m_Name: nodeLight4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &390795173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390795172}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &390795174
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390795172}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &390795175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390795172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.7607843, g: 0.24705882, b: 0.9529412, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10066
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 3
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 3
 --- !u!1 &392889787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +4204,149 @@ Transform:
   m_Father: {fileID: 695148283}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &399823345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399823346}
+  - component: {fileID: 399823348}
+  - component: {fileID: 399823347}
+  m_Layer: 0
+  m_Name: nodeLight7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &399823346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399823345}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &399823347
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399823345}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &399823348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399823345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.9607843, g: 0.9607843, b: 0.14901961, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10132
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 6
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 6
 --- !u!1 &430071344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,6 +4388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.9876664, b: 0.19339621, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -3842,6 +4597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 100
@@ -4199,6 +4955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -4376,6 +5133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.96012753, g: 0.9622642, b: 0.14978641, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -4416,7 +5174,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -4520,9 +5296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 4
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &514281196
 GameObject:
@@ -4686,6 +5463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.36158893, b: 0.9529412, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -4859,6 +5637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.21363226, g: 0.990566, b: 0.032707386, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -5037,9 +5816,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fca52bfdcff884d9c3e7671f57814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _sampleCubePrefab: {fileID: 100000, guid: 8230837d057ccfe40960ba50d7cefc8f, type: 3}
   _startScale: 1
-  _scaleMultiplier: 200
+  _scaleMultiplier: 1500
   _useBuffer: 1
 --- !u!1 &557131777
 GameObject:
@@ -5174,6 +5954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9529412, b: 0.8679038, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -5439,6 +6220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.7600059, g: 0.2470588, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -5479,7 +6261,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -5816,6 +6616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9228348, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -5903,6 +6704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 100
@@ -6080,9 +6882,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.3646418, g: 0.9529412, b: 0.2470588, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10022
   _stepSize: 1
   _maxIteration: 179
@@ -6381,6 +7184,149 @@ Transform:
   m_Father: {fileID: 1434023528}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &648089573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648089574}
+  - component: {fileID: 648089576}
+  - component: {fileID: 648089575}
+  m_Layer: 0
+  m_Name: nodeLight3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &648089574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648089573}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &648089575
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648089573}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &648089576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648089573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.24705882, g: 0.36078432, b: 0.9529412, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10044
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 2
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 2
 --- !u!1 &661408136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,6 +7460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.80831206, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -6661,6 +7608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.24230155, g: 0.5032111, b: 0.9339623, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -6932,6 +7880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.80831206, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -7239,9 +8188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9811321, g: 0.17123532, b: 0.20786147, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10132
   _stepSize: 1
   _maxIteration: 179
@@ -7483,6 +8433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.35315782, g: 0.9529412, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -7691,6 +8642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.26758245, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -7880,9 +8832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab88643e03c2cd944b6fbf4650235daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _sampleCubePrefab: {fileID: 129616, guid: 98875e3defde74546aef81d300ec6923, type: 2}
   _startScale: 1
-  _scaleMultiplier: 5
+  _scaleMultiplier: 25
   _useBuffer: 1
   speed: 10
 --- !u!4 &822468916
@@ -8154,6 +9107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.18187828, g: 0.15730685, b: 0.9528302, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -8333,6 +9287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9811321, g: 0.17123532, b: 0.20786147, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -8565,9 +9520,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 905171724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f360d0132f84641b39fe5d37a91754, type: 3}
+  m_Script: {fileID: 11500000, guid: 859f5c21d5bc9b94d8f05420701d8b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioBand: []
+  _audioBandBuffer: []
+  _audioBand64: []
+  _audioBandBuffer64: []
+  _Amplitude: 0
+  _AmplitudeBuffer: 0
+  _audioProfile: 5
+  channel: 0
 --- !u!82 &905171726
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8577,7 +9540,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8c4f8a973c9db8a4db90654076b232a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8425fe30068f4c4469eac3f1f1b0e256, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8973,6 +9936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -9058,6 +10022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -9102,6 +10067,149 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &937600168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937600169}
+  - component: {fileID: 937600171}
+  - component: {fileID: 937600170}
+  m_Layer: 0
+  m_Name: nodeLight1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937600169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937600168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &937600170
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937600168}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &937600171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937600168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.3647059, g: 0.9529412, b: 0.24705882, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10000
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 0
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 0
 --- !u!1 &977537284
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,9 +10343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.80831206, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10110
   _stepSize: 1
   _maxIteration: 179
@@ -9414,6 +10523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.36158893, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -9454,7 +10564,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -9593,6 +10721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.56934595, g: 0.19326274, b: 0.9528302, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -9941,6 +11070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.73574036, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -10197,6 +11327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 100
@@ -10374,6 +11505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.3646418, g: 0.9529412, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -10414,7 +11546,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -10553,9 +11703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9529412, b: 0.8679038, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10044
   _stepSize: 1
   _maxIteration: 179
@@ -10640,6 +11791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -11104,6 +12256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.56934595, g: 0.19326274, b: 0.9528302, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -11248,9 +12401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 3
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &1107884440
 GameObject:
@@ -11852,6 +13006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.45469198, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -11939,6 +13094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -12182,6 +13338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9529412, b: 0.8679038, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -12222,7 +13379,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -12393,9 +13568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 7
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &1276927111
 GameObject:
@@ -12908,6 +14084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9529412, g: 0.2470588, b: 0.73574036, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -12981,10 +14158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47659fbb9dc79bb4b877525ca2b1aab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _sampleCubePrefab: {fileID: 129616, guid: 25702c56e2a48b64ab080f89267bdd80, type: 2}
   sphereStart: 150
   _startScale: 1
-  _scaleMultiplier: 0.5
+  _scaleMultiplier: 2.25
   _useBuffer: 1
   speed: 15
 --- !u!4 &1325735776
@@ -13098,9 +14276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 6
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &1376065741
 GameObject:
@@ -13375,6 +14554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.7600059, g: 0.2470588, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -13694,6 +14874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.3646418, g: 0.9529412, b: 0.2470588, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -13920,6 +15101,149 @@ Transform:
   m_Father: {fileID: 695148283}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1495472710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495472711}
+  - component: {fileID: 1495472713}
+  - component: {fileID: 1495472712}
+  m_Layer: 0
+  m_Name: nodeLight2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495472711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495472710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 361479157}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1495472712
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495472710}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &1495472713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1495472710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ebce0621097a94cb24294aff6f9b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
+  _lightColor: {r: 0.24705882, g: 0.9529412, b: 0.8666667, a: 0.39215687}
+  _degree: 2
+  _scale: 0.1
+  _numberStart: 10022
+  _stepSize: 1
+  _maxIteration: 179
+  _useLerping: 1
+  _lerpPosSpeedMinMax: {x: 200, y: 200}
+  _lerpPosAnimCurvve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _lerpPosBand: 1
+  _repeat: 1
+  _invert: 0
+  _useScaleAnimation: 1
+  _useScaleCurve: 0
+  _scaleAnimMinMax: {x: 0.1, y: 0.2}
+  _scaleAnimCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _scalAnimSpeed: 0
+  _scaleBand: 1
 --- !u!1 &1546290023
 GameObject:
   m_ObjectHideFlags: 0
@@ -14083,6 +15407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -14346,6 +15671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.72019917, b: 0.1462264, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -14386,7 +15712,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -14433,6 +15777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -14610,6 +15955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9228348, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -14874,6 +16220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.9529412, b: 0.8679038, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -15187,6 +16534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.6782669, b: 0.11792451, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -15366,6 +16714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.22027414, g: 0.8490566, b: 0.81663156, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -15545,6 +16894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.13989913, b: 0.08018869, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -15724,6 +17074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -15838,6 +17189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.66513777, g: 0.15574935, b: 0.9433962, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -16204,6 +17556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.3646418, g: 0.9529412, b: 0.2470588, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -16419,6 +17772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9811321, g: 0.17123532, b: 0.20786147, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -16459,7 +17813,25 @@ MonoBehaviour:
   _scaleAnimMinMax: {x: 0.1, y: 0.2}
   _scaleAnimCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -16506,6 +17878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -16591,6 +17964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.27402386, g: 0.10849059, b: 1, a: 0.39215687}
   _degree: 51
   _scale: 0.1
@@ -16770,6 +18144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -17259,6 +18634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.96012753, g: 0.9622642, b: 0.14978641, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -17481,6 +18857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.72019917, b: 0.1462264, a: 0.39215687}
   _degree: -2
   _scale: 0.1
@@ -17866,9 +19243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.96012753, g: 0.9622642, b: 0.14978641, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10176
   _stepSize: 1
   _maxIteration: 179
@@ -18280,6 +19658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.96012753, g: 0.9622642, b: 0.14978641, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -18438,6 +19817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 100
@@ -18697,6 +20077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -18977,9 +20358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &2013894956
 GameObject:
@@ -19114,6 +20496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.9811321, g: 0.17123532, b: 0.20786147, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -19287,9 +20670,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 0
   _startScale: 1
-  _scaleMultiplier: 30
+  _scaleMultiplier: 375
   _useBuffer: 1
 --- !u!1 &2045047988
 GameObject:
@@ -19455,6 +20839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000da9ea56bdab498c20707cd5bfa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 5
   _startScale: 1
   _scaleMultiplier: 30
@@ -19678,6 +21063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 0.2470588, g: 0.45469198, b: 0.9529412, a: 0.39215687}
   _degree: 2
   _scale: 0.1
@@ -20021,6 +21407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c865be6ec2f3044ab7364369eb0421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _band: 2
   minIntensity: 0
   maxIntensity: 10
@@ -20198,9 +21585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.72019917, b: 0.1462264, a: 0.39215687}
-  _degree: 51
-  _scale: 0.1
+  _degree: 137.5
+  _scale: 0.2
   _numberStart: 10154
   _stepSize: 1
   _maxIteration: 179
@@ -20443,6 +21831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2071f9596166f124198779011f1b3a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aC: {fileID: 905171725}
   _trailColor: {r: 1, g: 0.72019917, b: 0.1462264, a: 0.39215687}
   _degree: 2
   _scale: 0.1

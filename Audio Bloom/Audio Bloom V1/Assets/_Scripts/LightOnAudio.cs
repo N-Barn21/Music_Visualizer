@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightOnAudio : MonoBehaviour {
+    public AudioController_V2 aC;
     public int _band;
     public float minIntensity;
     public float maxIntensity;
@@ -36,7 +37,7 @@ public class LightOnAudio : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        light.intensity = (AudioController.audioBandBuffer[_band] * (maxIntensity - minIntensity))
+        light.intensity = (aC._audioBandBuffer[_band] * (maxIntensity - minIntensity))
             + minIntensity;
         //startColor = new Color(Random.value, Random.value, Random.value);
         //endColor = new Color(Random.value, Random.value, Random.value);

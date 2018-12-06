@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fountain_Visualizer: MonoBehaviour {
+    public AudioController_V2 aC;
     public GameObject _sampleCubePrefab;
     private GameObject[] _sampleCubes = new GameObject[224];
     private int[] bandAssignments = new int[224];
@@ -158,13 +159,13 @@ public class Fountain_Visualizer: MonoBehaviour {
             if (_useBuffer == true)
             {
                 _sampleCubes[i].transform.localScale = new Vector3(5,
-                    (AudioController._bandbuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
                     5);
             }
             if (_useBuffer == false)
             {
                 _sampleCubes[i].transform.localScale = new Vector3(5,
-                    (AudioController._freqband[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale,
                     5);
             }
         }
