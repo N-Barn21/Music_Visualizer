@@ -40,7 +40,7 @@ public class AudioController_V2 : MonoBehaviour {
         _audioBand = new float[8];
         _audioBandBuffer = new float[8];
         _audioBand64 = new float[64];
-        _audioBandBuffer64 = new float[864];
+        _audioBandBuffer64 = new float[64];
         _audiosource = GetComponent<AudioSource>();
         AudioProfile(_audioProfile);
     }

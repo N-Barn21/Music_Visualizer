@@ -5,8 +5,7 @@ using UnityEngine;
 public class Line_Visualizer : MonoBehaviour {
     public AudioController_V2 aC;
     public GameObject _sampleCubePrefab;
-    private GameObject[] _sampleCubes = new GameObject[80];
-    private int[] bandAssignments = new int[80];
+    private GameObject[] _sampleCubes = new GameObject[64];
     public float _startScale;
     public float _scaleMultiplier;
     public bool _useBuffer;
@@ -14,40 +13,34 @@ public class Line_Visualizer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        int count = 0;
-        for (int i = 0; i < 80; i++)
+        for (int i = 0; i < 64; i++)
         {
-            bandAssignments[i] = count;
             GameObject _temp = (GameObject)Instantiate(_sampleCubePrefab); //Create a temp cube to put in array
             _temp.transform.position = this.transform.position;
             _temp.transform.parent = this.transform;
             _temp.name = "Line Cube" + i;
             this.transform.eulerAngles = new Vector3(0, 0, 0); //This rotates the object at its origin
-            _temp.transform.position = Vector3.forward * ((i * 7.15f) + 1f); // this moves the obect at its origin
+            _temp.transform.position = Vector3.forward * ((i * 9f) + 1f); // this moves the obect at its origin
             _sampleCubes[i] = _temp; //stores temp cube in the array of cubes
 
-            if(count == 7)
-                count = 0;
-            else
-                count++;
         }
         this.transform.eulerAngles = new Vector3(0, -90, 0); //This rotates the object at its origin
     }
 	
 	// Update is called once per frame
 	void Update () {
-        for (int i = 0; i < 80; i++)
+        for (int i = 0; i < 64; i++)
         {
             if (_useBuffer == true)
             {
                 material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
                 _sampleCubes[i].transform.localScale = new Vector3(20,
-                    (aC._audioBandBuffer[bandAssignments[i]] * _scaleMultiplier) + _startScale,
+                    (aC._audioBandBuffer64[i] * _scaleMultiplier) + _startScale,
                     20);
                 
-                Color color = new Color(aC._audioBandBuffer[bandAssignments[i]],
-                    aC._audioBandBuffer[bandAssignments[i]],
-                    aC._audioBandBuffer[bandAssignments[i]]);
+                Color color = new Color(aC._audioBandBuffer64[i],
+                    aC._audioBandBuffer64[i],
+                    aC._audioBandBuffer64[i]);
                 material.SetColor("_EmissionColor", color);
                 
             }
@@ -55,12 +48,12 @@ public class Line_Visualizer : MonoBehaviour {
             {
                 material = _sampleCubes[i].GetComponent<MeshRenderer>().materials[0];
                 _sampleCubes[i].transform.localScale = new Vector3(20,
-                    (aC._AmplitudeBuffer * _scaleMultiplier) + _startScale,
+                    (aC._audioBand64[i] * _scaleMultiplier) + _startScale,
                     20);
                 
-                Color color = new Color(aC._AmplitudeBuffer,
-                   aC._AmplitudeBuffer,
-                   aC._AmplitudeBuffer);
+                Color color = new Color(aC._audioBand64[i],
+                   aC._audioBand64[i],
+                   aC._audioBand64[i]);
                 material.SetColor("_EmissionColor", color);
                 
             }
